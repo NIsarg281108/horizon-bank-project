@@ -1,0 +1,390 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background:#f4f7fb;
+    color:#333;
+    line-height:1.6;
+}
+a{
+    text-decoration:none;
+}
+header{
+    background:#003366;
+    color:white;
+    height:75px;
+    padding:0 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+nav a{
+    color:white;
+    margin-left:25px;
+    font-weight:bold;
+}
+nav a:hover{
+    color:#ffcc00;
+}
+.hero{
+    height:85vh;
+    background:
+        linear-gradient(rgba(0, 45, 98, 0.55), rgba(0, 45, 98, 0.55)),
+        url("securebank/images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+.hero-content{
+    max-width:700px;
+}
+.hero-content h4{
+    color:#ffcc00;
+    letter-spacing:2px;
+    margin-bottom:15px;
+    font-size:18px;
+}
+.hero-content h1{
+    font-size:58px;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+.hero-content p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+.btn{
+    background:#ffcc00;
+    color:#003366;
+    padding:14px 35px;
+    border-radius:30px;
+    font-weight:bold;
+    display:inline-block;
+    transition:0.3s;
+}
+.hero-buttons{
+    margin-top:30px;
+}
+.btn2{
+    background:white;
+    color:#003366;
+    margin-left:15px;
+}
+.btn2:hover{
+    background:#ffcc00;
+}
+.btn:hover{
+    background:white;
+    transform:scale(1.1);
+}
+section{
+    padding:70px 8%;
+}
+.title{
+    text-align:center;
+    color:#003366;
+    font-size:35px;
+    margin-bottom:40px;
+}
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 15px #00000040;
+}
+.card:hover{
+    transform:translateY(-8px);
+}
+.card h3{
+    color:#003366;
+    margin-bottom:15px;
+}
+.about-box{
+    background:white;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+.about-box h2{
+    color:#003366;
+    margin-bottom:15px;
+}
+.account-card{
+    width:380px;
+    max-width:100%;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+.account-card p{
+    padding:12px 0;
+    border-bottom:1px solid #ddd;
+}
+.account-card span{
+    float:right;
+    font-weight:bold;
+    color:#003366;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+th{
+    background:#003366;
+    color:white;
+    padding:15px;
+}
+td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+form{
+    max-width:600px;
+    margin:auto;
+}
+input{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+.message{
+    height:130px;
+    resize:none;
+}
+button{
+    background:#003366;
+    color:white;
+    padding:14px 35px;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+}
+button:hover{
+    background:#00509e;
+}
+footer{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+.service-img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+.card img:hover{
+    transform:scale(1.05);
+}
+.credit{
+    color: rgb(77, 146, 8);
+}
+.debit{
+    color: crimson;
+}
+textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    height: 140px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+.login-btn{
+    background:#ffcc00;
+    color:#003366;
+    padding:10px 22px;
+    border-radius:25px;
+    margin-left:25px;
+    font-weight:bold;
+    transition:0.3s;
+}
+.login-btn:hover{
+    background:white;
+    color:#003366;
+}
+.login-section{
+    min-height:85vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f4f7fb;
+}
+.login-box{
+    width:400px;
+    max-width:90%;
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    text-align:center;
+}
+.login-box h2{
+    color:#003366;
+    margin-bottom:10px;
+}
+.login-box p{
+    color:#666;
+    margin-bottom:25px;
+}
+.login-box input{
+    width:100%;
+    padding:14px;
+    margin-bottom:18px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+.login-box button{
+    width:100%;
+    padding:14px;
+    background:#003366;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+.login-box button:hover{
+    background:#00509e;
+}
+.login-links{
+    margin-top:20px;
+}
+.login-links a{
+    color:#003366;
+    font-size:14px;
+    font-weight:bold;
+}
+.login-links a:hover{
+    color:#ffcc00;
+}
+tr:hover{
+    background:#f4f8fe;
+}
+@media (max-width: 992px){
+    header{
+        padding:15px 5%;
+        height:auto;
+        flex-direction:column;
+    }
+    nav{
+        margin-top:15px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+    nav a{
+        margin:0;
+    }
+    .hero{
+        height:70vh;
+    }
+    .hero-content h1{
+        font-size:42px;
+    }
+    .hero-content p{
+        font-size:18px;
+    }
+    .hero-buttons{
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:15px;
+    }
+    .btn2{
+        margin-left:0;
+    }
+    section{
+        padding:60px 5%;
+    }
+}
+@media (max-width: 768px){
+    .hero{
+        height:65vh;
+        padding:20px;
+    }
+    .hero-content h1{
+        font-size:34px;
+    }
+    .hero-content h4{
+        font-size:16px;
+    }
+    .hero-content p{
+        font-size:16px;
+    }
+    .cards{
+        grid-template-columns:1fr;
+    }
+    .account-card{
+        width:100%;
+    }
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+    form{
+        width:100%;
+    }
+}
+@media (max-width: 480px){
+    .logo{
+        font-size:24px;
+    }
+    .hero-content h1{
+        font-size:28px;
+    }
+    .hero-content p{
+        font-size:15px;
+    }
+    .btn{
+        width:100%;
+        margin-bottom:15px;
+        text-align:center;
+    }
+    .hero-buttons{
+        flex-direction:column;
+    }
+    footer{
+        padding:20px;
+    }
+}
+#accountLink,
+#transactionLink,
+#logoutLink{
+    display:none;
+}
