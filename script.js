@@ -7,7 +7,8 @@ function checkLogin() {
     }
 
 }
-function updateNavigation(){
+
+function updateNavigation() {
 
     let isloggedin = localStorage.getItem("isloggedin");
 
@@ -16,26 +17,51 @@ function updateNavigation(){
     let login = document.getElementById("loginLink");
     let logout = document.getElementById("logoutLink");
 
-    if(account && transaction && login && logout)
-    {
-        if(isloggedin === "true")
-        {
-            account.style.display = "";
-            transaction.style.display = "";
-            logout.style.display = "";
-            login.style.display = "none";
+    let heroButton = document.getElementById("heroButton");
+    let welcome = document.getElementById("welcomeMessage");
+
+    if (isloggedin === "true") {
+
+        if(account) account.style.display = "inline";
+        if(transaction) transaction.style.display = "inline";
+
+        if(login) login.style.display = "none";
+        if(logout) logout.style.display = "inline";
+
+        if(heroButton){
+            heroButton.innerHTML = "My Account";
+            heroButton.href = "account.html";
         }
 
-        else
-        {
-            account.style.display = "none";
-            transaction.style.display = "none";
-            logout.style.display = "none";
-            login.style.display = "";
+        let name = localStorage.getItem("customerName");
+
+        if(welcome){
+            welcome.innerHTML = "Welcome Back,  " + name + "👋";
         }
+
+    }
+
+    else {
+
+        if(account) account.style.display = "none";
+        if(transaction) transaction.style.display = "none";
+
+        if(login) login.style.display = "inline";
+        if(logout) logout.style.display = "none";
+
+        if(heroButton){
+            heroButton.innerHTML = "Login";
+            heroButton.href = "login.html";
+        }
+
+        if(welcome){
+            welcome.innerHTML = "Secure Banking for Your Future";
+        }
+
     }
 
 }
+
 function login() {
 
     let customerid = document.getElementById("customerid").value;
@@ -45,27 +71,37 @@ function login() {
     error.innerHTML = "";
 
     if (customerid === "" && password === "") {
+
         error.innerHTML = "Please enter Customer ID and Password.";
+
     }
 
     else if (customerid === "") {
+
         error.innerHTML = "Please enter Customer ID.";
+
     }
 
     else if (password === "") {
+
         error.innerHTML = "Please enter Password.";
+
     }
 
     else if (customerid === "HB1001" && password === "Horizon@123") {
 
         localStorage.setItem("isloggedin", "true");
         localStorage.setItem("customerid", customerid);
+        localStorage.setItem("customerName", "Abhinav Sharma");
 
         window.location.href = "account.html";
+
     }
 
     else {
+
         error.innerHTML = "Invalid Customer ID or Password.";
+
     }
 
 }
@@ -84,10 +120,12 @@ function togglePassword() {
 
 }
 
-function logout(){
+function logout() {
 
-    localStorage.setItem("isloggedin","false");
+    localStorage.removeItem("isloggedin");
+    localStorage.removeItem("customerid");
+    localStorage.removeItem("customerName");
 
-    window.location.href="index.html";
+    window.location.href = "index.html";
 
 }
