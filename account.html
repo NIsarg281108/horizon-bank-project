@@ -49,20 +49,47 @@
 </div>
 </section>
 <section>
-<h2 class="title">Account Features</h2>
+<h2 class="title">Quick Actions</h2>
 <div class="cards">
-<div class="card">
-<h3>Money Transfer</h3>
-<p>Transfer funds securely to other accounts.</p>
+<div class="card" onclick="transferMoney()">
+<h3>💸 Transfer Money</h3>
+<p>Send money instantly to another account.</p>
 </div>
-<div class="card">
-<h3>Bill Payments</h3>
-<p>Pay your bills easily through banking services.</p>
+<div class="card" onclick="downloadStatement()">
+<h3>📄 Download Statement</h3>
+<p>Download your latest account statement.</p>
 </div>
-<div class="card">
-<h3>Card Services</h3>
-<p>Manage debit and credit card facilities.</p>
+<div class="card" onclick="manageCards()">
+<h3>💳 Card Services</h3>
+<p>Manage your debit and credit cards.</p>
 </div>
+<div class="card" onclick="contactSupport()">
+<h3>☎ Customer Support</h3>
+<p>Need help? Contact our support team.</p>
+</div>
+</div>
+</section>
+<section>
+<h2 class="title">Your Debit Card</h2>
+<div class="debit-card">
+    <h2>HORIZON BANK</h2>
+    <p class="card-type">💳 Debit Card</p>
+    <p class="card-number" id="cardNumber">
+        **** **** **** 1295
+    </p>
+    <div class="card-bottom">
+        <div>
+            <small>Card Holder</small>
+            <h4>ABHINAV SHARMA</h4>
+        </div>
+        <div>
+            <small>VALID THRU</small>
+            <h4 id="expiry">**/**</h4>
+        </div>
+    </div>
+    <br>
+    <small>CVV</small>
+    <h4 id="cvv">***</h4>
 </div>
 </section>
 <footer>

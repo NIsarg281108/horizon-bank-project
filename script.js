@@ -54,7 +54,7 @@ function login() {
     else if (password === "") {
         error.innerHTML = "Please enter Password.";
     }
-    else if (customerid === "HB1001" && password === "Horizon@123") {
+    else if (customerid === "HB1001" && password === "Jenu@123") {
         localStorage.setItem("isloggedin", "true");
         localStorage.setItem("customerid", customerid);
         localStorage.setItem("customerName", "Abhinav Sharma");
@@ -91,6 +91,9 @@ function toggleDetails(){
         document.getElementById("accountNumber").innerHTML = "🔒 **********";
         document.getElementById("balance").innerHTML = "🔒 **********";
         button.innerHTML = "🔐 View Sensitive Details";
+        document.getElementById("cardNumber").innerHTML ="**** **** **** 1295";
+        document.getElementById("expiry").innerHTML ="**/**";
+        document.getElementById("cvv").innerHTML ="***";
     }
 }
 function verifyPin(){
@@ -104,8 +107,23 @@ function verifyPin(){
         button.innerHTML = "🔒 Hide Sensitive Details";
         document.getElementById("pin").value = "";
         error.innerHTML = "";
+        document.getElementById("cardNumber").innerHTML ="4587 8912 4587 1295";
+        document.getElementById("expiry").innerHTML ="09/30";
+        document.getElementById("cvv").innerHTML ="482";
     }
     else{
         error.innerHTML = "Incorrect PIN";
     }
+}
+function transferMoney(){
+    alert("Transfer Money feature will be available soon.");
+}
+function downloadStatement(){
+    alert("Statement download will be available soon.");
+}
+function manageCards(){
+    alert("Card Services feature will be available soon.");
+}
+function contactSupport(){
+    alert("Customer Support is available 24/7.");
 }
