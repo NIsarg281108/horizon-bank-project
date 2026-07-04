@@ -1,101 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Horizon Bank - Account</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body onload="checkLogin(); updateNavigation()">
-<header>
-    <div class="logo">Horizon Bank</div>
-    <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizon Bank - Account</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    onload="
+      checkLogin();
+      updateNavigation();
+    "
+  >
+    <header>
+      <div class="logo">Horizon Bank</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
 
-    <a href="account.html" id="accountLink">Account</a>
+        <a href="account.html" id="accountLink">Account</a>
 
-    <a href="transactions.html" id="transactionLink">Transactions</a>
+        <a href="transactions.html" id="transactionLink">Transactions</a>
 
-    <a href="contact.html">Contact</a>
+        <a href="contact.html">Contact</a>
 
-    <a href="login.html" class="login-btn" id="loginLink">Login</a>
+        <a href="login.html" class="login-btn" id="loginLink">Login</a>
 
-    <a href="#" class="login-btn" id="logoutLink" onclick="logout()">Logout</a>
-</nav>
-</header>
-<section>
-<h1 class="title">Account Summary</h1>
-<div class="account-card">
-<p>Account Holder<span>Abhinav Sharma</span></p>
-<p>Account Number<span id="accountNumber">🔒 **********</span></p>
-<p>Account Type<span>Savings</span></p>
-<p>Branch<span>Poonam Branch</span></p>
-<p>IFSC Code<span>HDFC0001799</span></p>
-<p>Current Balance<span id="balance">🔒 **********</span></p>
-</div>
-<div class="view-details">
-    <button id="viewButton" onclick="toggleDetails()">
-        🔐 View Sensitive Details
-    </button>
-</div>
-<div class="pin-box" id="pinBox">
-    <h3>Security Verification</h3>
-    <p>Please enter your 4-digit Security PIN.</p>
-    <input type="password" id="pin" placeholder="Enter PIN" maxlength="4">
-    <button onclick="verifyPin()">Verify PIN</button>
-    <p id="pinError"></p>
-</div>
-</section>
-<section>
-<h2 class="title">Quick Actions</h2>
-<div class="cards">
-<div class="card" onclick="transferMoney()">
-<h3>💸 Transfer Money</h3>
-<p>Send money instantly to another account.</p>
-</div>
-<div class="card" onclick="downloadStatement()">
-<h3>📄 Download Statement</h3>
-<p>Download your latest account statement.</p>
-</div>
-<div class="card" onclick="manageCards()">
-<h3>💳 Card Services</h3>
-<p>Manage your debit and credit cards.</p>
-</div>
-<div class="card" onclick="contactSupport()">
-<h3>☎ Customer Support</h3>
-<p>Need help? Contact our support team.</p>
-</div>
-</div>
-</section>
-<section>
-<h2 class="title">Your Debit Card</h2>
-<div class="debit-card">
-    <h2>HORIZON BANK</h2>
-    <p class="card-type">💳 Debit Card</p>
-    <p class="card-number" id="cardNumber">
-        **** **** **** 1295
-    </p>
-    <div class="card-bottom">
-        <div>
+        <a href="#" class="login-btn" id="logoutLink" onclick="logout()"
+          >Logout</a
+        >
+      </nav>
+    </header>
+    <section>
+      <h1 class="title">Account Summary</h1>
+      <div class="account-card">
+        <p>Account Holder<span>Abhinav Sharma</span></p>
+        <p>Account Number<span id="accountNumber">🔒 **********</span></p>
+        <p>Account Type<span>Savings</span></p>
+        <p>Branch<span>Poonam Branch</span></p>
+        <p>IFSC Code<span>HDFC0001799</span></p>
+        <p>Current Balance<span id="balance">🔒 **********</span></p>
+      </div>
+      <div class="view-details">
+        <button id="viewButton" onclick="toggleDetails()">
+          🔐 View Sensitive Details
+        </button>
+      </div>
+      <div class="pin-box" id="pinBox">
+        <h3>Security Verification</h3>
+        <p>Please enter your 4-digit Security PIN.</p>
+        <input type="password" id="pin" placeholder="Enter PIN" maxlength="4" />
+        <button onclick="verifyPin()">Verify PIN</button>
+        <p id="pinError"></p>
+      </div>
+    </section>
+    <section>
+      <h2 class="title">Quick Actions</h2>
+      <div class="cards">
+        <div class="card" onclick="transferMoney()">
+          <h3>💸 Transfer Money</h3>
+          <p>Send money instantly to another account.</p>
+        </div>
+        <div class="card" onclick="downloadStatement()">
+          <h3>📄 Download Statement</h3>
+          <p>Download your latest account statement.</p>
+        </div>
+        <div class="card" onclick="manageCards()">
+          <h3>💳 Card Services</h3>
+          <p>Manage your debit and credit cards.</p>
+        </div>
+        <div class="card" onclick="contactSupport()">
+          <h3>☎ Customer Support</h3>
+          <p>Need help? Contact our support team.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2 class="title">Your Debit Card</h2>
+      <div class="debit-card">
+        <h2>HORIZON BANK</h2>
+        <p class="card-type">💳 Debit Card</p>
+        <p class="card-number" id="cardNumber">**** **** **** 1295</p>
+        <div class="card-bottom">
+          <div>
             <small>Card Holder</small>
             <h4>ABHINAV SHARMA</h4>
-        </div>
-        <div>
+          </div>
+          <div>
             <small>VALID THRU</small>
             <h4 id="expiry">**/**</h4>
+          </div>
         </div>
-    </div>
-    <br>
-    <small>CVV</small>
-    <h4 id="cvv">***</h4>
-</div>
-</section>
-<footer>
-<p>Horizon Bank. All Rights Reserved.
-</p>
-</footer>
-<script src="script.js"></script>
-</body>
+        <br />
+        <small>CVV</small>
+        <h4 id="cvv">***</h4>
+      </div>
+    </section>
+    <footer>
+      <p>Horizon Bank. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>

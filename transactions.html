@@ -1,104 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Horizon Bank - Transactions</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body onload="checkLogin(); updateNavigation()">
-<header>
-    <div class="logo">Horizon Bank</div>
-    <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horizon Bank - Transactions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    onload="
+      checkLogin();
+      updateNavigation();
+    "
+  >
+    <header>
+      <div class="logo">Horizon Bank</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
 
-    <a href="account.html" id="accountLink">Account</a>
+        <a href="account.html" id="accountLink">Account</a>
 
-    <a href="transactions.html" id="transactionLink">Transactions</a>
+        <a href="transactions.html" id="transactionLink">Transactions</a>
 
-    <a href="contact.html">Contact</a>
+        <a href="contact.html">Contact</a>
 
-    <a href="login.html" class="login-btn" id="loginLink">Login</a>
+        <a href="login.html" class="login-btn" id="loginLink">Login</a>
 
-    <a href="#" class="login-btn" id="logoutLink" onclick="logout()">Logout</a>
-</nav>
-</header>
-<section>
-<h1 class="title">Transaction History</h1>
-<table>
-<tr>
-<th>Date</th>
-<th>Description</th>
-<th>Transaction Type</th>
-<th>Amount</th>
-<th>Status</th>
-</tr>
-<tr>
-<td>28 November 2026</td>
-<td>Salary Credit</td>
-<td>Credit</td>
-<td><span class="credit">+3500</span></td>
-<td>Completed</td>
-</tr>
-<tr>
-<td>26 November 2026</td>
-<td>Electricity Bill Payment</td>
-<td>Debit</td>
-<td><span class="debit">-150</span></td>
-<td>Completed</td>
-</tr>
-<tr>
-<td>18 November 2026</td>
-<td>Online Shopping</td>
-<td>Debit</td>
-<td><span class="debit">-250</span></td>
-<td>Completed</td>
-</tr>
-<tr>
-<td>10 October 2026</td>
-<td>Money Transfer</td>
-<td>Debit</td>
-<td><span class="debit">-500</span></td>
-<td>Completed</td>
-</tr>
-<tr>
-<td>05 October 2026</td>
-<td>Interest Received</td>
-<td>Credit</td>
-<td><span class="credit">+50</span></td>
-<td>Completed</td>
-</tr>
-<tr>
-<td>01 October 2026</td>
-<td>Grocery Shopping</td>
-<td>Debit</td>
-<td><span class="debit">-200</span></td>
-<td>Completed</td>
-</tr>
-</table>
-</section>
-<section>
-<h2 class="title">Transaction Summary</h2>
-<div class="cards">
-<div class="card">
-<h3>Total Credits</h3>
-<p><span class="credit">+3550</span></p>
-</div>
-<div class="card">
-<h3>Total Debits</h3>
-<p><span class="debit">-900</span></p>
-</div>
-<div class="card">
-<h3>Current Balance</h3>
-<p><strong>12,500</strong></p>
-</div>
-</div>
-</section>
-<footer>
-<p>Horizon Bank. All Rights Reserved.</p>
-</footer>
-<script src="script.js"></script>
-</body>
+        <a href="#" class="login-btn" id="logoutLink" onclick="logout()"
+          >Logout</a
+        >
+      </nav>
+    </header>
+    <section>
+      <h1 class="title">Transaction History</h1>
+      <table>
+        <tr>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Transaction Type</th>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>28 November 2026</td>
+          <td>Salary Credit</td>
+          <td>Credit</td>
+          <td><span class="credit">+3500</span></td>
+          <td>Completed</td>
+        </tr>
+        <tr>
+          <td>26 November 2026</td>
+          <td>Electricity Bill Payment</td>
+          <td>Debit</td>
+          <td><span class="debit">-150</span></td>
+          <td>Completed</td>
+        </tr>
+        <tr>
+          <td>18 November 2026</td>
+          <td>Online Shopping</td>
+          <td>Debit</td>
+          <td><span class="debit">-250</span></td>
+          <td>Completed</td>
+        </tr>
+        <tr>
+          <td>10 October 2026</td>
+          <td>Money Transfer</td>
+          <td>Debit</td>
+          <td><span class="debit">-500</span></td>
+          <td>Completed</td>
+        </tr>
+        <tr>
+          <td>05 October 2026</td>
+          <td>Interest Received</td>
+          <td>Credit</td>
+          <td><span class="credit">+50</span></td>
+          <td>Completed</td>
+        </tr>
+        <tr>
+          <td>01 October 2026</td>
+          <td>Grocery Shopping</td>
+          <td>Debit</td>
+          <td><span class="debit">-200</span></td>
+          <td>Completed</td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2 class="title">Transaction Summary</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Total Credits</h3>
+          <p><span class="credit">+3550</span></p>
+        </div>
+        <div class="card">
+          <h3>Total Debits</h3>
+          <p><span class="debit">-900</span></p>
+        </div>
+        <div class="card">
+          <h3>Current Balance</h3>
+          <p><strong>12,500</strong></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>Horizon Bank. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
