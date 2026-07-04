@@ -29,11 +29,23 @@
 <h1 class="title">Account Summary</h1>
 <div class="account-card">
 <p>Account Holder<span>Abhinav Sharma</span></p>
-<p>Account Number<span>7977921295</span></p>
+<p>Account Number<span id="accountNumber">🔒 **********</span></p>
 <p>Account Type<span>Savings</span></p>
 <p>Branch<span>Poonam Branch</span></p>
 <p>IFSC Code<span>HDFC0001799</span></p>
-<p>Available Balance<span>12,500</span></p>
+<p>Current Balance<span id="balance">🔒 **********</span></p>
+</div>
+<div class="view-details">
+    <button id="viewButton" onclick="toggleDetails()">
+        🔐 View Sensitive Details
+    </button>
+</div>
+<div class="pin-box" id="pinBox">
+    <h3>Security Verification</h3>
+    <p>Please enter your 4-digit Security PIN.</p>
+    <input type="password" id="pin" placeholder="Enter PIN" maxlength="4">
+    <button onclick="verifyPin()">Verify PIN</button>
+    <p id="pinError"></p>
 </div>
 </section>
 <section>

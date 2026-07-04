@@ -388,3 +388,48 @@ tr:hover{
 #logoutLink{
     display:none;
 }
+.password-box{
+    position:relative;
+    width:100%;
+}
+.password-box input{
+    width:100%;
+    padding-right:50px;
+}
+#eyeIcon{
+    position:absolute;
+    right:15px;
+    top:13px;
+    width:22px;
+    height:22px;
+    cursor:pointer;
+}
+.view-details{
+    text-align:center;
+    margin-top:25px;
+}
+.pin-box{
+    width:350px;
+    max-width:100%;
+    margin:25px auto;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    display:none;
+}
+.pin-box h3{
+    color:#003366;
+    margin-bottom:10px;
+}
+.pin-box p{
+    margin-bottom:15px;
+}
+.pin-box input{
+    margin-bottom:15px;
+}
+#pinError{
+    color:red;
+    font-weight:bold;
+    margin-top:10px;
+}

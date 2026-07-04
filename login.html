@@ -30,7 +30,10 @@
     <h2>Welcome Back</h2>
     <p>Login to your Horizon Bank Account</p>
     <input type="text" id="customerid" placeholder="Customer ID">
-    <input type="password" id="password" placeholder="Password">
+    <div class="password-box">
+    <input type="password" id="password" placeholder="Enter Password">
+    <img src="securebank/images/Untitled_design-removebg-preview.png" id="eyeIcon" onclick="togglePassword()">
+</div>
     <p id="error" style="color:red; margin-bottom:15px;"></p>
     <button onclick="login()">Login</button>
 <div class="login-links">
