@@ -93,9 +93,9 @@ function verifyPin() {
   let pin = document.getElementById("pin").value;
   let error = document.getElementById("pinError");
   let button = document.getElementById("viewButton");
-  if (pin === "1234") {
+  if (pin === "110212") {
     document.getElementById("accountNumber").innerHTML = "7977921295";
-    document.getElementById("balance").innerHTML = "₹12,500";
+    document.getElementById("balance").innerHTML = "$12,500";
     document.getElementById("pinBox").style.display = "none";
     button.innerHTML = "🔒 Hide Sensitive Details";
     document.getElementById("pin").value = "";
